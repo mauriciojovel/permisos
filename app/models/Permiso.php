@@ -2,7 +2,7 @@
 class Permiso extends ValidatorEloquent {
 	protected $table = 'permiso';
 	//protected $guarded = array('id', 'nombre','descripcion','activa');
-	//protected $fillable = array('id', 'nombre','descripcion','activa');
+	protected $fillable = array('id', 'usuario_id','proyecto_id','tipo_permiso_id','detalle','fecha');
 	protected $rules = array(
 		'usuario_id'=>'required|integer',
 		'proyecto_id'=>'required|integer',

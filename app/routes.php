@@ -81,3 +81,4 @@ Route::controller('empresa', 'EmpresaController');
 Route::controller('proyecto', 'ProyectoController');
 Route::controller('puesto', 'PuestoController');
 Route::controller('empleado', 'EmpleadoController');
+Route::controller('permiso', 'PermisoController');

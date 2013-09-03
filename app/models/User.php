@@ -57,4 +57,12 @@ class User extends ValidatorEloquent implements UserInterface, RemindableInterfa
 		return $this->email;
 	}
 
+	public function empleadoProyecto() {
+		return $this->hasMany('Empleadoproyecto','usuario_id');
+	}
+
+	public function empleadoPuesto() {
+		return $this->hasMany('Empleadopuesto', 'usuario_id');
+	}
+
 }

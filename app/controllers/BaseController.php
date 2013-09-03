@@ -1,7 +1,6 @@
 <?php
 
 class BaseController extends Controller {
-
 	protected $pageSize = 15;
 	protected $orderBy = 'id';
 
@@ -19,7 +18,13 @@ class BaseController extends Controller {
 	}
 
 	static function getCurrentUser() {
-		return User::where('name','=',Auth::user()->username)->first();
+		$_user = null;
+		if(Auth::guest()===true) {
+			$_user = null;
+		} else {
+			$_user = User::where('name','=',Auth::user()->username)->first();
+		}
+		return $_user;
 	}
 
 }
