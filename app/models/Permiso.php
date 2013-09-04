@@ -22,4 +22,8 @@ class Permiso extends ValidatorEloquent {
 	public function tipoPermiso() {
 		return $this->belongsTo('Tipopermiso');
 	}
+
+	public function reposiciones() {
+		return $this->hasMany('Reposicion');
+	}
 }
